@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANITAS-AI - نظام ذكاء اصطناعي متقدم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>VANITAS-AI</h1>
+                </div>
+                <p class="tagline">نظام ذكاء اصطناعي متقدم</p>
+            </div>
+        </header>
+
+        <!-- Main Chat Container -->
+        <div class="chat-container">
+            <!-- Chat History -->
+            <div class="chat-history" id="chatHistory">
+                <div class="welcome-message">
+                    <i class="fas fa-robot"></i>
+                    <h2>مرحباً بك في VANITAS-AI</h2>
+                    <p>أنا هنا لمساعدتك في أي سؤال أو مشكلة. كيف أستطيع مساعدتك اليوم؟</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="اكتب رسالتك هنا..." 
+                        rows="2"
+                    ></textarea>
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="info-text">اضغط Enter + Shift للرسالة التالية، أو انقر الزر لإرسال</div>
+            </div>
+        </div>
+
+        <!-- Settings Sidebar -->
+        <div class="settings-sidebar" id="settingsSidebar">
+            <div class="settings-header">
+                <h3>الإعدادات</h3>
+                <button id="closeSettings" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="settings-content">
+                <div class="setting-group">
+                    <label>وضع الألوان:</label>
+                    <div class="theme-toggle">
+                        <button id="lightMode" class="theme-btn active">
+                            <i class="fas fa-sun"></i> فاتح
+                        </button>
+                        <button id="darkMode" class="theme-btn">
+                            <i class="fas fa-moon"></i> غامق
+                        </button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <label>سرعة الاستجابة:</label>
+                    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+                    <span id="speedValue">1x</span>
+                </div>
+                <button id="clearChat" class="clear-btn">
+                    <i class="fas fa-trash"></i> مسح المحادثة
+                </button>
+            </div>
+        </div>
+
+        <!-- Settings Button -->
+        <button id="settingsBtn" class="settings-btn">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
